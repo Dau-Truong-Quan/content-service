@@ -1,4 +1,8 @@
 spring:
+  data:
+    redis:
+      url: ${REDIS_URL:redis://localhost:6379}
+
   datasource:
     url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/content}
     username: ${DATABASE_USER:content}

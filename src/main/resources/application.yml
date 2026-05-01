@@ -13,22 +13,10 @@ spring:
         timezone:
           default_storage: NORMALIZE
   cache:
-    type: caffeine
-    cache-names:
-      - plants
-      - plants-list
-      - journal
-      - journal-list
-      - gallery
-      - gallery-list
-      - offerings
-      - offerings-list
-      - stats
-    caffeine:
-      spec: maximumSize=200,expireAfterWrite=10m
+    type: redis
 
 server:
-  port: 8082
+  port: 8083
 
 management:
   endpoints:
